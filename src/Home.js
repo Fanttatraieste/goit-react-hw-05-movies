@@ -19,7 +19,7 @@ const linkStyles = {
 
 export default function Home() {
   const [isLoading, setLoading] = useState(true);
-  const [movieList, setMovieList] = useState({});
+  const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
     setMovieList([]);
