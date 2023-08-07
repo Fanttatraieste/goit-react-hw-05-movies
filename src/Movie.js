@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Suspense } from 'react';
 import { Link, Outlet, useParams } from 'react-router-dom';
 
 const key =
@@ -35,7 +36,9 @@ export default function Movie() {
           </li>
         </ul>
       </div>
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 }
